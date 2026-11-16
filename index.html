@@ -165,6 +165,78 @@
         </div>
       </article>
 
+      <!-- Khối 8: Form Liên Hệ Glassmorphism (Toàn chiều rộng) -->
+      <article class="bento-card card-contact">
+        <div class="card-glow glow-contact"></div>
+        <div class="card-glow glow-contact-secondary"></div>
+        <div class="card-inner contact-layout">
+          <!-- Cột thông tin giới thiệu -->
+          <div class="contact-info">
+            <div class="card-icon icon-contact">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </div>
+            <div class="tag tag-contact">Liên hệ hợp tác</div>
+            <h3>Khởi động dự án mới cùng chúng tôi</h3>
+            <p>Bạn có câu hỏi, đề xuất hợp tác hoặc ý tưởng đột phá? Hãy gửi tin nhắn cho chúng tôi, đội ngũ kỹ thuật sẽ phản hồi trong vòng 24 giờ.</p>
+
+            <div class="contact-badges">
+              <div class="contact-badge-item">
+                <span class="badge-dot"></span>
+                <span>Phản hồi siêu tốc &lt; 2h</span>
+              </div>
+              <div class="contact-badge-item">
+                <span class="badge-dot"></span>
+                <span>Bảo mật thông tin tuyệt đối</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form liên hệ với hiệu ứng kính mờ (Glassmorphism) -->
+          <form class="contact-form" onsubmit="event.preventDefault();">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Họ và tên</label>
+                <div class="input-wrapper">
+                  <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                  <input type="text" id="contact-name" name="name" class="form-input" placeholder="Nguyễn Văn A" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Email</label>
+                <div class="input-wrapper">
+                  <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                  </svg>
+                  <input type="email" id="contact-email" name="email" class="form-input" placeholder="email@example.com" required>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message" class="form-label">Nội dung</label>
+              <div class="input-wrapper">
+                <textarea id="contact-message" name="message" class="form-input form-textarea" rows="4" placeholder="Nhập nội dung tin nhắn hoặc mô tả dự án của bạn..." required></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="submit-button">
+              <span>Gửi tin nhắn</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </article>
+
     </main>
   </div>
 </body>
