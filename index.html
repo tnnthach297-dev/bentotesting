@@ -3,21 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bento Grid 3 Cột Hiện Đại</title>
+  <title>Bento AI — Bảng điều khiển hệ thống &amp; Giám sát hạ tầng</title>
   <!-- Google Fonts: Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="bento-container">
-    <!-- Thanh Điều Hướng (Navigation Bar Glassmorphism) -->
+    <!-- Thanh Điều Hướng (Navigation Bar) -->
     <nav class="site-nav">
       <a href="index.html" class="nav-brand">
-        <span class="brand-icon">⚡</span>
-        <span>BENTO AI</span>
+        <span class="brand-glyph">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+            <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+            <rect x="14" y="14" width="7" height="7" rx="1"></rect>
+            <rect x="3" y="14" width="7" height="7" rx="1"></rect>
+          </svg>
+        </span>
+        <span>Bento AI</span>
       </a>
 
       <div class="nav-links">
@@ -27,17 +34,20 @@
       </div>
 
       <div class="nav-actions">
-        <a href="about.html" class="cta-button" style="padding: 8px 18px; font-size: 0.875rem;">
-          Khám phá &rarr;
+        <a href="about.html" class="nav-back-button">
+          <span>Tìm hiểu thêm</span>
         </a>
       </div>
     </nav>
 
     <!-- Tiêu đề trang -->
     <header class="bento-header">
-      <div class="badge-header">BENTO UI SYSTEM</div>
-      <h1 class="header-title">Thiết Kế Bento Grid Hiện Đại</h1>
-      <p class="header-subtitle">Bố cục lưới 3 cột trực quan, tối ưu hóa không gian hiển thị và tương thích hoàn hảo trên mọi thiết bị.</p>
+      <div class="badge-header">
+        <span class="status-dot"></span>
+        <span>Hệ thống giám sát v2.4</span>
+      </div>
+      <h1 class="header-title">Bảng điều khiển hệ thống &amp; Hạ tầng AI</h1>
+      <p class="header-subtitle">Theo dõi độ trễ biên, phân luồng suy luận thời gian thực và kiểm soát tài nguyên cụm máy chủ trên một giao diện thống nhất.</p>
     </header>
 
     <!-- Lưới Bento Grid chính (3 Cột) -->
@@ -45,24 +55,73 @@
 
       <!-- Khối 1: Hero Card nổi bật (Chiếm 2 cột, 2 hàng) -->
       <article class="bento-card card-hero col-span-2 row-span-2">
-        <div class="card-glow"></div>
         <div class="card-inner">
-          <div class="tag tag-highlight">⚡ Trọng tâm hệ thống</div>
-          <h2>Nền tảng trí tuệ nhân tạo thế hệ mới</h2>
-          <p>Tự động hóa các luồng xử lý công việc phức tạp với độ chính xác cao và khả năng mở rộng không giới hạn.</p>
+          <div class="hero-header-row">
+            <div class="tag tag-highlight">
+              <span class="status-dot"></span>
+              <span>Cụm máy chủ đang hoạt động</span>
+            </div>
+            <div class="system-status">
+              <span>SLA 99.98%</span>
+            </div>
+          </div>
+
+          <h2>Hiệu năng xử lý &amp; Lưu lượng cụm suy luận</h2>
+          <p>Giám sát thời gian thực chu kỳ P99 latency, phân bổ tài nguyên GPU và điều phối hàng đợi tác vụ trên toàn bộ biên mạng.</p>
           
+          <!-- Telemetry Craft Moment: SVG Sparkline / Waveform -->
+          <div class="telemetry-chart">
+            <div class="chart-header">
+              <span class="chart-title font-mono">LATENCY TELEMETRY (24H)</span>
+              <div class="chart-legend font-mono">
+                <span class="legend-item"><span class="legend-line"></span> P99: 11.8ms</span>
+                <span class="legend-item"><span class="legend-line p50"></span> P50: 6.4ms</span>
+              </div>
+            </div>
+
+            <svg class="chart-svg" viewBox="0 0 600 100" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.16"/>
+                  <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.0"/>
+                </linearGradient>
+              </defs>
+              <!-- Gridlines -->
+              <line x1="0" y1="25" x2="600" y2="25" stroke="rgba(238, 240, 245, 0.05)" stroke-dasharray="3 3"/>
+              <line x1="0" y1="50" x2="600" y2="50" stroke="rgba(238, 240, 245, 0.05)" stroke-dasharray="3 3"/>
+              <line x1="0" y1="75" x2="600" y2="75" stroke="rgba(238, 240, 245, 0.05)" stroke-dasharray="3 3"/>
+              
+              <!-- P50 Baseline -->
+              <path d="M 0,72 Q 75,68 150,70 T 300,66 T 450,69 T 600,67" fill="none" stroke="rgba(163, 169, 184, 0.35)" stroke-width="1.5" stroke-dasharray="2 2"/>
+              
+              <!-- Area fill for P99 -->
+              <path d="M 0,42 Q 60,35 120,48 T 240,30 T 360,45 T 480,24 T 600,32 L 600,100 L 0,100 Z" fill="url(#areaGrad)"/>
+              
+              <!-- P99 Line -->
+              <path d="M 0,42 Q 60,35 120,48 T 240,30 T 360,45 T 480,24 T 600,32" fill="none" stroke="#38bdf8" stroke-width="1.5"/>
+            </svg>
+
+            <div class="chart-axis-labels">
+              <span>00:00</span>
+              <span>06:00</span>
+              <span>12:00</span>
+              <span>18:00</span>
+              <span>Hiện tại</span>
+            </div>
+          </div>
+
           <div class="hero-stats">
             <div class="stat-box">
               <span class="stat-number">99.98%</span>
-              <span class="stat-label">Thời gian Uptime</span>
+              <span class="stat-label">Thời gian uptime SLA</span>
             </div>
             <div class="stat-box">
-              <span class="stat-number">4.2x</span>
-              <span class="stat-label">Tăng tốc xử lý</span>
+              <span class="stat-number">11.8ms</span>
+              <span class="stat-label">Độ trễ trung bình P99</span>
             </div>
             <div class="stat-box">
-              <span class="stat-number">10M+</span>
-              <span class="stat-label">Yêu cầu mỗi ngày</span>
+              <span class="stat-number">14.2M</span>
+              <span class="stat-label">Lượt gọi API mỗi ngày</span>
             </div>
           </div>
         </div>
@@ -71,70 +130,85 @@
       <!-- Khối 2: Tốc độ / Hiệu năng (1 cột, 1 hàng) -->
       <article class="bento-card card-speed">
         <div class="card-inner">
-          <div class="card-icon icon-speed">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-            </svg>
+          <div class="metric-header">
+            <div class="card-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </div>
+            <span class="metric-title font-mono">EDGE CACHE</span>
           </div>
-          <span class="metric-title">Độ trễ trung bình</span>
+          <span class="metric-title">Độ trễ phản hồi trung bình</span>
           <div class="metric-value">12<span class="unit">ms</span></div>
-          <p class="metric-desc">Tối ưu bộ nhớ cache biên giúp tải dữ liệu gần như tức thì.</p>
+          <p class="metric-desc">Tối ưu bộ nhớ đệm biên giúp định tuyến suy luận nhanh hơn 38% so với cụm trung tâm.</p>
         </div>
       </article>
 
       <!-- Khối 3: Bảo mật & Riêng tư (1 cột, 1 hàng) -->
       <article class="bento-card card-security">
         <div class="card-inner">
-          <div class="card-icon icon-security">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <div class="card-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
               <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
             </svg>
           </div>
-          <h3>Bảo mật cấp doanh nghiệp</h3>
-          <p>Mã hóa AES-256 đầu cuối, đạt chuẩn kiểm toán quốc tế SOC 2 Loại II.</p>
+          <h3>Bảo mật cấp hạ tầng</h3>
+          <p>Mã hóa hai chiều AES-256 đầu cuối, cô lập môi trường sandbox theo tiêu chuẩn kiểm toán SOC 2 Loại II.</p>
         </div>
       </article>
 
       <!-- Khối 4: Cột dọc Timeline / Hoạt động (1 cột, 2 hàng) -->
       <article class="bento-card card-tall row-span-2">
         <div class="card-inner">
-          <div class="card-icon icon-timeline">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <div class="card-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="10"></circle>
               <polyline points="12 6 12 12 16 14"></polyline>
             </svg>
           </div>
-          <h3>Nhật ký hoạt động</h3>
-          <p class="card-subtext">Cập nhật sự kiện mới nhất</p>
+          <h3>Nhật ký hệ thống</h3>
+          <p class="card-subtext">Cập nhật kiểm toán gần nhất</p>
           
           <div class="timeline">
             <div class="timeline-item">
               <div class="timeline-dot active"></div>
               <div class="timeline-content">
-                <strong>Triển khai v2.4 thành công</strong>
-                <small>3 phút trước</small>
+                <strong>Triển khai bản vá v2.4</strong>
+                <div class="timeline-meta">
+                  <span>RELEASE_STABLE</span>
+                  <span>3 phút trước</span>
+                </div>
               </div>
             </div>
             <div class="timeline-item">
               <div class="timeline-dot"></div>
               <div class="timeline-content">
-                <strong>Đồng bộ cơ sở dữ liệu</strong>
-                <small>42 phút trước</small>
+                <strong>Đồng bộ chỉ mục cơ sở dữ liệu</strong>
+                <div class="timeline-meta">
+                  <span>DB_REINDEX</span>
+                  <span>42 phút trước</span>
+                </div>
               </div>
             </div>
             <div class="timeline-item">
               <div class="timeline-dot"></div>
               <div class="timeline-content">
-                <strong>Sao lưu hệ thống tự động</strong>
-                <small>2 giờ trước</small>
+                <strong>Tạo bản sao lưu tự động</strong>
+                <div class="timeline-meta">
+                  <span>SNAPSHOT_OK</span>
+                  <span>2 giờ trước</span>
+                </div>
               </div>
             </div>
             <div class="timeline-item">
               <div class="timeline-dot"></div>
               <div class="timeline-content">
-                <strong>Khởi tạo chứng chỉ SSL mới</strong>
-                <small>Hôm qua</small>
+                <strong>Gia hạn chứng chỉ SSL</strong>
+                <div class="timeline-meta">
+                  <span>TLS_ROTATED</span>
+                  <span>Hôm qua</span>
+                </div>
               </div>
             </div>
           </div>
@@ -145,12 +219,12 @@
       <article class="bento-card card-wide col-span-2">
         <div class="card-inner wide-layout">
           <div class="wide-content">
-            <div class="tag tag-accent">Tích hợp đa kênh</div>
-            <h3>Kết nối hơn 100+ dịch vụ & API thịnh hành</h3>
-            <p>Dễ dàng liên kết cùng GitHub, Slack, Discord, Google Drive và AWS chỉ với vài thao tác kéo thả.</p>
+            <div class="tag tag-accent">Tích hợp dịch vụ</div>
+            <h3>Kết nối đồng bộ với hệ sinh thái công nghệ</h3>
+            <p>Hỗ trợ webhooks và kết nối API trực tiếp với GitHub Actions, Slack, Docker, AWS S3 và Cloudflare.</p>
           </div>
           <div class="wide-cta">
-            <a href="about.html" class="cta-button">Khám phá ngay &rarr;</a>
+            <a href="about.html" class="cta-button">Xem chi tiết tích hợp</a>
           </div>
         </div>
       </article>
@@ -158,66 +232,64 @@
       <!-- Khối 6: Hỗ trợ đa nền tảng (1 cột, 1 hàng) -->
       <article class="bento-card card-device">
         <div class="card-inner">
-          <div class="card-icon icon-device">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <div class="card-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
               <line x1="8" y1="21" x2="16" y2="21"></line>
               <line x1="12" y1="17" x2="12" y2="21"></line>
             </svg>
           </div>
-          <h3>Đa nền tảng</h3>
-          <p>Mượt mà trên Web, iOS, Android, MacOS và Windows.</p>
+          <h3>Môi trường thực thi &amp; SDK</h3>
+          <p>Hỗ trợ chính thức thư viện Node.js, Python SDK, Go, Rust và REST API tiêu chuẩn.</p>
         </div>
       </article>
 
       <!-- Khối 7: Phân tích thông minh (1 cột, 1 hàng) -->
       <article class="bento-card card-analytics">
         <div class="card-inner">
-          <div class="card-icon icon-analytics">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <div class="card-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <line x1="18" y1="20" x2="18" y2="10"></line>
               <line x1="12" y1="20" x2="12" y2="4"></line>
               <line x1="6" y1="20" x2="6" y2="14"></line>
             </svg>
           </div>
-          <h3>Báo cáo tức thì</h3>
-          <p>Bảng điều khiển trực quan giúp theo dõi số liệu realtime.</p>
+          <h3>Cảnh báo &amp; Đo kiểm</h3>
+          <p>Tự động ghi nhận thông số GPU throttling, nghẽn hàng đợi suy luận và rò rỉ bộ nhớ.</p>
         </div>
       </article>
 
-      <!-- Khối 8: Form Liên Hệ Glassmorphism (Toàn chiều rộng) -->
+      <!-- Khối 8: Form Liên Hệ (Toàn chiều rộng) -->
       <article id="contact" class="bento-card card-contact">
-        <div class="card-glow glow-contact"></div>
-        <div class="card-glow glow-contact-secondary"></div>
         <div class="card-inner contact-layout">
           <!-- Cột thông tin giới thiệu -->
           <div class="contact-info">
-            <div class="card-icon icon-contact">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <div class="card-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
               </svg>
             </div>
-            <div class="tag tag-contact">Liên hệ hợp tác</div>
-            <h3>Khởi động dự án mới cùng chúng tôi</h3>
-            <p>Bạn có câu hỏi, đề xuất hợp tác hoặc ý tưởng đột phá? Hãy gửi tin nhắn cho chúng tôi, đội ngũ kỹ thuật sẽ phản hồi trong vòng 24 giờ.</p>
+            <div class="tag">Tư vấn kỹ thuật</div>
+            <h3>Trao đổi về kiến trúc triển khai</h3>
+            <p>Đội ngũ kỹ thuật hỗ trợ đánh giá nhu cầu hạ tầng, tối ưu chi phí GPU cluster và thiết kế giải pháp triển khai chuyên biệt.</p>
 
             <div class="contact-badges">
               <div class="contact-badge-item">
                 <span class="badge-dot"></span>
-                <span>Phản hồi siêu tốc &lt; 2h</span>
+                <span>Thời gian phản hồi kỹ thuật dưới 2 giờ</span>
               </div>
               <div class="contact-badge-item">
                 <span class="badge-dot"></span>
-                <span>Bảo mật thông tin tuyệt đối</span>
+                <span>Hỗ trợ triển khai on-premise hoặc private cloud</span>
               </div>
               <div class="contact-badge-item">
-                <span class="badge-dot" style="background: #38bdf8; box-shadow: 0 0 8px rgba(56, 189, 248, 0.7);"></span>
-                <span>Hỗ trợ tư vấn Zalo 24/7</span>
+                <span class="badge-dot"></span>
+                <span>Ký kết thỏa thuận bảo mật NDA trước khi tư vấn</span>
               </div>
             </div>
           </div>
 
-          <!-- Form liên hệ với hiệu ứng kính mờ (Glassmorphism & Formspree AJAX) -->
+          <!-- Form liên hệ (Formspree AJAX) -->
           <div class="form-wrapper">
             <div data-fs-success class="form-status-success"></div>
             <div data-fs-error class="form-status-error"></div>
@@ -226,7 +298,7 @@
               <div class="form-group">
                 <label for="contact-name" class="form-label">Họ và tên</label>
                 <div class="input-wrapper">
-                  <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg class="input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                     <circle cx="12" cy="7" r="4"></circle>
                   </svg>
@@ -237,21 +309,21 @@
 
               <div class="form-row">
                 <div class="form-group">
-                  <label for="contact-email" class="form-label">Email</label>
+                  <label for="contact-email" class="form-label">Email làm việc</label>
                   <div class="input-wrapper">
-                    <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg class="input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                       <rect x="2" y="4" width="20" height="16" rx="2"></rect>
                       <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
                     </svg>
-                    <input type="email" id="contact-email" name="email" class="form-input" placeholder="email@example.com" data-fs-field required>
+                    <input type="email" id="contact-email" name="email" class="form-input" placeholder="name@company.com" data-fs-field required>
                   </div>
                   <span data-fs-error="email" class="field-error"></span>
                 </div>
 
                 <div class="form-group">
-                  <label for="contact-phone" class="form-label">Số điện thoại / Zalo</label>
+                  <label for="contact-phone" class="form-label">Số điện thoại</label>
                   <div class="input-wrapper">
-                    <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg class="input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                       <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                     </svg>
                     <input type="tel" id="contact-phone" name="phone" class="form-input" placeholder="0912 345 678" data-fs-field required>
@@ -261,19 +333,15 @@
               </div>
 
               <div class="form-group">
-                <label for="contact-message" class="form-label">Nội dung</label>
+                <label for="contact-message" class="form-label">Nhu cầu triển khai</label>
                 <div class="input-wrapper">
-                  <textarea id="contact-message" name="message" class="form-input form-textarea" rows="4" placeholder="Nhập nội dung tin nhắn hoặc mô tả dự án của bạn..." data-fs-field required></textarea>
+                  <textarea id="contact-message" name="message" class="form-input form-textarea" rows="4" placeholder="Mô tả quy mô cụm máy chủ, lưu lượng dự kiến hoặc yêu cầu hạ tầng..." data-fs-field required></textarea>
                 </div>
                 <span data-fs-error="message" class="field-error"></span>
               </div>
 
               <button type="submit" class="submit-button" data-fs-submit-btn>
-                <span>Gửi tin nhắn</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="22" y1="2" x2="11" y2="13"></line>
-                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                </svg>
+                <span>Gửi yêu cầu tư vấn</span>
               </button>
             </form>
           </div>
@@ -284,7 +352,7 @@
 
     <!-- Footer trang -->
     <footer class="bento-footer">
-      <p>&copy; 2026 Bento AI Technologies. Mọi quyền được bảo lưu. Thiết kế giao diện Bento Grid & Glassmorphism hiện đại.</p>
+      <p>&copy; 2026 Bento AI Technologies. Giám sát hạ tầng và điều phối mô hình AI.</p>
     </footer>
   </div>
 
