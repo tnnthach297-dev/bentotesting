@@ -29,6 +29,7 @@
 
       <div class="nav-links">
         <a href="index.html" class="nav-link active">Trang chủ</a>
+        <a href="#menu" class="nav-link">Thực đơn</a>
         <a href="about.html" class="nav-link">Giới thiệu</a>
         <a href="#contact" class="nav-link">Liên hệ</a>
       </div>
@@ -49,6 +50,42 @@
       <h1 class="header-title">Bảng điều khiển hệ thống &amp; Hạ tầng AI</h1>
       <p class="header-subtitle">Theo dõi độ trễ biên, phân luồng suy luận thời gian thực và kiểm soát tài nguyên cụm máy chủ trên một giao diện thống nhất.</p>
     </header>
+
+    <!-- Danh mục sản phẩm (Product Menu) -->
+    <section id="menu" class="menu-section" aria-labelledby="menu-heading">
+      <div class="menu-header">
+        <div>
+          <div class="badge-header">Thực đơn nổi bật</div>
+          <h2 id="menu-heading" class="menu-title">Danh mục sản phẩm</h2>
+          <p class="menu-subtitle">Hương vị rang xay mộc mạc, cập nhật trực tiếp từ bảng thực đơn.</p>
+        </div>
+        <div id="menu-status" class="menu-status font-mono" aria-live="polite"></div>
+      </div>
+      <div id="menu-grid" class="menu-grid" aria-busy="true">
+        <!-- Initial loading placeholders replaced by script.js -->
+        <article class="bento-card product-card product-card--skeleton" aria-hidden="true">
+          <div class="product-image-wrap skeleton-img"></div>
+          <div class="product-body">
+            <div class="skeleton-line"></div>
+            <div class="skeleton-line skeleton-line--short"></div>
+          </div>
+        </article>
+        <article class="bento-card product-card product-card--skeleton" aria-hidden="true">
+          <div class="product-image-wrap skeleton-img"></div>
+          <div class="product-body">
+            <div class="skeleton-line"></div>
+            <div class="skeleton-line skeleton-line--short"></div>
+          </div>
+        </article>
+        <article class="bento-card product-card product-card--skeleton" aria-hidden="true">
+          <div class="product-image-wrap skeleton-img"></div>
+          <div class="product-body">
+            <div class="skeleton-line"></div>
+            <div class="skeleton-line skeleton-line--short"></div>
+          </div>
+        </article>
+      </div>
+    </section>
 
     <!-- Lưới Bento Grid chính (3 Cột) -->
     <main class="bento-grid">
@@ -82,23 +119,23 @@
             <svg class="chart-svg" viewBox="0 0 600 100" preserveAspectRatio="none">
               <defs>
                 <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.16"/>
-                  <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.0"/>
+                  <stop offset="0%" stop-color="#8D4F2A" stop-opacity="0.18"/>
+                  <stop offset="100%" stop-color="#8D4F2A" stop-opacity="0.0"/>
                 </linearGradient>
               </defs>
               <!-- Gridlines -->
-              <line x1="0" y1="25" x2="600" y2="25" stroke="rgba(238, 240, 245, 0.05)" stroke-dasharray="3 3"/>
-              <line x1="0" y1="50" x2="600" y2="50" stroke="rgba(238, 240, 245, 0.05)" stroke-dasharray="3 3"/>
-              <line x1="0" y1="75" x2="600" y2="75" stroke="rgba(238, 240, 245, 0.05)" stroke-dasharray="3 3"/>
+              <line x1="0" y1="25" x2="600" y2="25" stroke="rgba(78, 54, 41, 0.12)" stroke-dasharray="3 3"/>
+              <line x1="0" y1="50" x2="600" y2="50" stroke="rgba(78, 54, 41, 0.12)" stroke-dasharray="3 3"/>
+              <line x1="0" y1="75" x2="600" y2="75" stroke="rgba(78, 54, 41, 0.12)" stroke-dasharray="3 3"/>
               
               <!-- P50 Baseline -->
-              <path d="M 0,72 Q 75,68 150,70 T 300,66 T 450,69 T 600,67" fill="none" stroke="rgba(163, 169, 184, 0.35)" stroke-width="1.5" stroke-dasharray="2 2"/>
+              <path d="M 0,72 Q 75,68 150,70 T 300,66 T 450,69 T 600,67" fill="none" stroke="rgba(78, 54, 41, 0.4)" stroke-width="1.5" stroke-dasharray="2 2"/>
               
               <!-- Area fill for P99 -->
               <path d="M 0,42 Q 60,35 120,48 T 240,30 T 360,45 T 480,24 T 600,32 L 600,100 L 0,100 Z" fill="url(#areaGrad)"/>
               
               <!-- P99 Line -->
-              <path d="M 0,42 Q 60,35 120,48 T 240,30 T 360,45 T 480,24 T 600,32" fill="none" stroke="#38bdf8" stroke-width="1.5"/>
+              <path d="M 0,42 Q 60,35 120,48 T 240,30 T 360,45 T 480,24 T 600,32" fill="none" stroke="#8D4F2A" stroke-width="1.5"/>
             </svg>
 
             <div class="chart-axis-labels">
@@ -362,5 +399,6 @@
     formspree('initForm', { formElement: '#contact-form', formId: 'xkjrjkpd' });
   </script>
   <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
